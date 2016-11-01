@@ -13,7 +13,7 @@ public class GUIFrame extends JFrame
 	{
 		super();
 		this.baseController = baseController;
-		appPanel = new GUIPanel(baseController);
+		this.appPanel = new GUIPanel(baseController);
 		
 		setupFrame();
 	}
