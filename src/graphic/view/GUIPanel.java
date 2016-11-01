@@ -46,6 +46,14 @@ public class GUIPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.SOUTH, colorButton, -10, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.EAST, colorButton, -10, SpringLayout.EAST, this);
 	}
+	
+	private void changeBackground()
+	{
+		int red = (int) (Math.random() * 256);
+		int green = (int) (Math.random() * 256);
+		int blue =(int) (Math.random() * 256);
+		this.setBackground(new Color(red, green, blue));
+	}
 
 	private void setupListeners()
 	{
@@ -54,6 +62,14 @@ public class GUIPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				setBackground(Color.MAGENTA);
+			}
+		});
+		
+		randomButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				changeBackground();
 			}
 		});
 	}
