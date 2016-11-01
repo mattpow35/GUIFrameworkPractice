@@ -45,7 +45,7 @@ public class GUIPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.println("Hey you clicked this!");
+				setBackground(Color.MAGENTA);
 			}
 		});
 	}
